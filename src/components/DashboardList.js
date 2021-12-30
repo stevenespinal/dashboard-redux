@@ -23,7 +23,7 @@ const DashboardList = () => {
             <h6>{dash.categories && <Categories />}</h6>
             <h6>{dash.listOfProducts && <ProductList />}</h6>
             <h6>{dash.totalCustomers && <TotalCustomers />}</h6>
-            <h6>{dash.totalCustomers && <TotalProducts />}</h6>
+            <h6>{dash.totalProducts && <TotalProducts />}</h6>
           </div>
         );
       })}
