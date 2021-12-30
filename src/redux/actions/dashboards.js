@@ -9,6 +9,7 @@ export const createDashboards = (payload) => async (dispatch) => {
     dispatch({ type: CREATE_DASHBOARD_REQUEST });
     dispatch({ type: CREATE_DASHBOARD_SUCCESS, payload });
   } catch (error) {
+    console.error(error);
     dispatch({
       type: CREATE_DASHBOARD_FAIL,
       payload: new Error("Could not fetch dashboards."),

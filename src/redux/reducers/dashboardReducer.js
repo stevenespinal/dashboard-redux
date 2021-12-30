@@ -8,9 +8,14 @@ export const createDashboard = (state = { dashboards: [] }, action) => {
   const { type, payload } = action;
   switch (type) {
     case CREATE_DASHBOARD_REQUEST:
-      return { loading: true };
+      return { ...state, loading: true };
     case CREATE_DASHBOARD_SUCCESS:
-      return { loading: false, dashboards: payload };
+      console.log(state);
+      return {
+        ...state,
+        loading: false,
+        dashboards: [...state.dashboards, payload],
+      };
     case CREATE_DASHBOARD_FAIL:
       return { loading: false, error: payload };
     default:

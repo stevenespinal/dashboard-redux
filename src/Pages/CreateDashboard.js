@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { createDashboards } from "../redux/actions/dashboards";
 // use bootstrap ui after logic finished
@@ -13,8 +13,7 @@ const CreateDashboard = () => {
 
   const dispatch = useDispatch();
 
-  const submitHandler = (e) => {
-    e.preventDefault();
+  useEffect(() => {
     const newDashboardData = {
       name: dashboardName,
       listOfProducts,
@@ -24,6 +23,18 @@ const CreateDashboard = () => {
       categories,
     };
     setDashboard(newDashboardData);
+  }, [
+    dashboardName,
+    listOfProducts,
+    totalCustomers,
+    totalProducts,
+    latestProducts,
+    categories,
+  ]);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
     dispatch(createDashboards(dashboard));
   };
 
