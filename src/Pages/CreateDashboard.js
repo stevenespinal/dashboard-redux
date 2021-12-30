@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import DashboardList from "../components/DashboardList";
 import { createDashboards } from "../redux/actions/dashboards";
 // use bootstrap ui after logic finished
 const CreateDashboard = () => {
@@ -81,6 +82,8 @@ const CreateDashboard = () => {
         onChange={(e) => setListOfProducts(!listOfProducts)}
       />
       <button type="submit">Create Dashboard</button>
+
+      <DashboardList />
     </form>
   );
 };

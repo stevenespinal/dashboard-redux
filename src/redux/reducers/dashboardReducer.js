@@ -10,7 +10,6 @@ export const createDashboard = (state = { dashboards: [] }, action) => {
     case CREATE_DASHBOARD_REQUEST:
       return { ...state, loading: true };
     case CREATE_DASHBOARD_SUCCESS:
-      console.log(state);
       return {
         ...state,
         loading: false,
