@@ -4,13 +4,18 @@ import {
   compose,
   createStore,
 } from "@reduxjs/toolkit";
-import { totalProducts } from "./reducers/productReducer";
 import thunk from "redux-thunk";
-
+import { totalProducts } from "./reducers/productReducer";
+import { createDashboard } from "./reducers/dashboardReducer";
+import { totalCustomers } from "./reducers/customerReducer";
+import { allCategories } from "./reducers/categoriesReducer";
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
   totalProducts,
+  createDashboard,
+  totalCustomers,
+  allCategories,
 });
 
 const store = createStore(

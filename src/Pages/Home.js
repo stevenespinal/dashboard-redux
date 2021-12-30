@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { getTotalProducts } from "../redux/actions/products";
+import Categories from "../components/Categories";
+import ProductList from "../components/ProductList";
+import TotalCustomers from "../components/TotalCustomers";
+import TotalProducts from "../components/TotalProducts";
 const Home = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getTotalProducts());
-  }, []);
   return (
     <>
       <button>
         <Link to="/create">Create Dashboard</Link>
       </button>
+      <TotalProducts />
+      <ProductList />
+      <TotalCustomers />
+      <Categories />
     </>
   );
 };

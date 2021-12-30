@@ -10,7 +10,7 @@ export const totalProducts = (state = { products: [] }, action) => {
     case TOTAL_PRODUCTS_REQUEST:
       return { loading: true };
     case TOTAL_PRODUCTS_SUCCESS:
-      return { products: payload, loading: false };
+      return { loading: false, products: payload };
     case TOTAL_PRODUCTS_FAIL:
       return { loading: false, error: payload };
     default:

@@ -5,7 +5,7 @@ import {
 } from "../constants/products";
 import axios from "axios";
 
-export const getTotalProducts = (payload) => async (dispatch) => {
+export const getTotalProducts = () => async (dispatch) => {
   try {
     dispatch({ type: TOTAL_PRODUCTS_REQUEST });
 
