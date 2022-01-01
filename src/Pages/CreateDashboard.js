@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import DashboardList from "../components/DashboardList";
 import { createDashboards } from "../redux/actions/dashboards";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CreateDashboard = () => {
   const [dashboard, setDashboard] = useState({});
@@ -35,12 +37,16 @@ const CreateDashboard = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
-    dispatch(createDashboards(dashboard));
+    if (!dashboardName) {
+      toast.error("You must enter a name");
+    } else {
+      dispatch(createDashboards(dashboard));
+    }
   };
 
   return (
     <form onSubmit={submitHandler} className="container">
+      <ToastContainer />
       <h2 className="mt-5">Which components would you like to include?</h2>
       <div className="mt-5 mb-3">
         <div className="input-wrapper">

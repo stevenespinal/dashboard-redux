@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getTotalCustomers } from "../redux/actions/customers";
-import { Spinner, Table, Card } from "react-bootstrap";
+import { Spinner, Table } from "react-bootstrap";
 
 const TotalCustomers = () => {
   const dispatch = useDispatch();
@@ -14,10 +14,9 @@ const TotalCustomers = () => {
   }, [dispatch]);
   return (
     <>
-      <Card>
-        <Card.Body>Total Amount of Customers: {customers?.length}</Card.Body>
-      </Card>
-      <Table striped bordered hover size="sm">
+      <span>Total Amount of Customers: {customers?.length}</span>
+
+      <Table striped bordered hover size="sm" className="mt-3">
         <thead>
           <tr>
             <th>Name</th>

@@ -143,3 +143,38 @@ code {
   background-color: transparent;
   border-bottom: 2px solid #001f3f;
 }
+
+.category-container {
+  display: flex;
+  align-items: center;
+}
+
+.category-item {
+  list-style: none;
+  margin: 15px 3px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+.latest-product-container {
+  display: flex;
+  align-items: center;
+}
+
+.latest-product-container img {
+  width: 250px;
+  height: 250px;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .latest-product-container {
+    flex-direction: column;
+  }
+}

@@ -5,7 +5,7 @@ import {
   createStore,
 } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
-import { totalProducts } from "./reducers/productReducer";
+import { totalProducts, randomProduct } from "./reducers/productReducer";
 import { createDashboard } from "./reducers/dashboardReducer";
 import { totalCustomers } from "./reducers/customerReducer";
 import { allCategories } from "./reducers/categoriesReducer";
@@ -16,6 +16,7 @@ const rootReducer = combineReducers({
   createDashboard,
   totalCustomers,
   allCategories,
+  randomProduct,
 });
 
 const store = createStore(

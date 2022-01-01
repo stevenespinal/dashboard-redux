@@ -18,9 +18,12 @@ const Categories = () => {
       <span className="visually-hidden">Loading...</span>
     </Spinner>
   ) : (
-    <ul>
+    <ul className="category-container">
+      <span>All Categories: </span>
       {categories.map((cat, index) => (
-        <li key={index}>{cat}</li>
+        <li className="category-item" key={index}>
+          {cat}
+        </li>
       ))}
     </ul>
   );

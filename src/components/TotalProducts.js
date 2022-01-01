@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Spinner, Card } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 import { getTotalProducts } from "../redux/actions/products";
 
 const TotalProducts = () => {
@@ -18,9 +18,7 @@ const TotalProducts = () => {
       <span className="visually-hidden">Loading...</span>
     </Spinner>
   ) : (
-    <Card>
-      <Card.Body>Total Amount of Products: {products.length}</Card.Body>
-    </Card>
+    <span>Total Amount of Products: {products.length}</span>
   );
 };
 
