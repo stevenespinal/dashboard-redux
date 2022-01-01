@@ -40,48 +40,64 @@ const CreateDashboard = () => {
   };
 
   return (
-    <form
-      onSubmit={submitHandler}
-      style={{ display: "flex", flexDirection: "column" }}
-    >
-      <label htmlFor="dashboardName">Dashboard Name</label>
-      <input
-        id="dashboardName"
-        type="text"
-        onChange={(e) => setDashboardName(e.target.value)}
-        value={dashboardName}
-      />
-      <label htmlFor="totalCustomers">Include Total Customers?</label>
-      <input
-        id="totalCustomers"
-        type="checkbox"
-        onChange={(e) => setTotalCustomers(!totalCustomers)}
-      />
-      <label htmlFor="totalProducts">Include Total Products?</label>
-      <input
-        id="totalProducts"
-        type="checkbox"
-        onChange={(e) => setTotalProducts(!totalProducts)}
-      />
-      <label htmlFor="latestProduct">Include Latest Product?</label>
-      <input
-        id="latestProduct"
-        type="checkbox"
-        onChange={(e) => setLatestProducts(!latestProducts)}
-      />
-      <label htmlFor="categories">Include Categories?</label>
-      <input
-        id="categories"
-        type="checkbox"
-        onChange={(e) => setCategories(!categories)}
-      />
-      <label htmlFor="listsOfProducts">Include Lists Of Products?</label>
-      <input
-        id="listsOfProducts"
-        type="checkbox"
-        onChange={(e) => setListOfProducts(!listOfProducts)}
-      />
-      <button type="submit">Create Dashboard</button>
+    <form onSubmit={submitHandler} className="container">
+      <h2 className="mt-5">Which components would you like to include?</h2>
+      <div className="mt-5 mb-3">
+        <div className="input-wrapper">
+          <input
+            id="dashboardName"
+            type="text"
+            onChange={(e) => setDashboardName(e.target.value)}
+            value={dashboardName}
+            placeholder="Enter Desired Dashboard Name"
+          />
+        </div>
+      </div>
+      <div className="inputGroup">
+        <input
+          id="totalCustomers"
+          type="checkbox"
+          onChange={(e) => setTotalCustomers(!totalCustomers)}
+        />
+        <label htmlFor="totalCustomers">Total Customers</label>
+      </div>
+
+      <div className="inputGroup">
+        <input
+          id="totalProducts"
+          type="checkbox"
+          onChange={(e) => setTotalProducts(!totalProducts)}
+        />
+        <label htmlFor="totalProducts">Total Products</label>
+      </div>
+      <div className="inputGroup">
+        <input
+          id="latestProduct"
+          type="checkbox"
+          onChange={(e) => setLatestProducts(!latestProducts)}
+        />
+        <label htmlFor="latestProduct">Latest Product</label>
+      </div>
+      <div className="inputGroup">
+        <input
+          id="categories"
+          type="checkbox"
+          onChange={(e) => setCategories(!categories)}
+        />
+        <label htmlFor="categories">Categories</label>
+      </div>
+      <div className="inputGroup">
+        <input
+          id="listsOfProducts"
+          type="checkbox"
+          onChange={(e) => setListOfProducts(!listOfProducts)}
+        />
+        <label htmlFor="listsOfProducts">Lists Of Products</label>
+      </div>
+
+      <button type="submit" className="btn btn-dark mt-3">
+        Create Dashboard
+      </button>
 
       <DashboardList />
     </form>

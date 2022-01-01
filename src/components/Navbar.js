@@ -16,7 +16,7 @@ const NavBar = () => {
             />{" "}
             <span>React Redux Dashboard</span>
           </Navbar.Brand>
-          <Navbar.Text>Welcome to our dashboard application</Navbar.Text>
+          <Navbar.Text>WELCOME</Navbar.Text>
         </Container>
       </Navbar>
     </>

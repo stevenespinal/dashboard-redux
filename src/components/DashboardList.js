@@ -16,7 +16,10 @@ const DashboardList = () => {
       <span className="visually-hidden">Loading...</span>
     </Spinner>
   ) : (
-    <div style={{ display: "grid", gridTemplateColumns: "1fr" }}>
+    <div
+      className="mt-5"
+      style={{ display: "grid", gridTemplateColumns: "1fr" }}
+    >
       {dashboards.map((dash, index) => {
         console.log("dash", dash);
         return (
