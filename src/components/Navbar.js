@@ -14,11 +14,9 @@ const NavBar = () => {
               height="30"
               className="d-inline-block align-top"
             />{" "}
-            <span>React Redux Dashbaord</span>
+            <span>React Redux Dashboard</span>
           </Navbar.Brand>
-          <Navbar.Text>
-            <Link to="/create">Create Dashboard</Link>
-          </Navbar.Text>
+          <Navbar.Text>Welcome to our dashboard application</Navbar.Text>
         </Container>
       </Navbar>
     </>
