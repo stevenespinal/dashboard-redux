@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getTotalCustomers } from "../redux/actions/customers";
 import { Spinner, Table, Card } from "react-bootstrap";
+
 const TotalCustomers = () => {
   const dispatch = useDispatch();
   const { customers, loading } = useSelector(

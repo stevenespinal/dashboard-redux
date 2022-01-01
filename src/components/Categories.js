@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCategories } from "../redux/actions/categories";
 import { Spinner } from "react-bootstrap";
+
 const Categories = () => {
   const dispatch = useDispatch();
   const { categories, loading } = useSelector(

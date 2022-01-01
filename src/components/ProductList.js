@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Spinner, Table } from "react-bootstrap";
 import { getTotalProducts } from "../redux/actions/products";
+
 const ProductList = () => {
   const dispatch = useDispatch();
 
