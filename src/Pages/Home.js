@@ -1,9 +1,4 @@
 import { Link } from "react-router-dom";
-import Categories from "../components/Categories";
-import ProductList from "../components/ProductList";
-import TotalCustomers from "../components/TotalCustomers";
-import TotalProducts from "../components/TotalProducts";
-import Image from "react-bootstrap/Image";
 import Hero from "../img/hero.jpg";
 const Home = () => {
   return (
@@ -24,10 +19,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <TotalProducts />
-      <ProductList />
-      <TotalCustomers />
-      <Categories /> */}
     </>
   );
 };
